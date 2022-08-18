@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">    
+    <div id="calendar"></div>
+        <div class="modal fade" id="divModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="divModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-info">
+                <h5 class="modal-title" id="modalTitle">Event</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                  <!-- let modal close=> delete this <span aria-hidden="true">&times;</span> -->
+                </button>
+              </div>
+              <form action="" id="formModal">
+                    <div class="modal-body">                    
+                        <div class="form-floating mb-3">
+                          <input id="title" type="text" class="form-control" >
+                          <label for="title" class="form-label" name="date">Event</label>
+                          </div>
+                        <div class="form-floating mb-3">
+                          <input id="start" type="date" class="form-control" >
+                          <label for="start" class="form-label" name="date">Date</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input id="color" type="color" class="form-control"  name="color">
+                            <label for="color" class="form-label">Color</label>
+                          </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-warning">Cancel</button>
+                      <button class="btn btn-danger">Delete</button>
+                      <button class="btn btn-info">Register</button>
+                    </div>            
+                </form>                
+              </div>               
+            </div>
+          </div>          
+      </div>
+  </div>
+  {% endblock %}
+        
+        
+
+
+
+
+
+       
+
+

@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import Start, Home
+from .views import Home, Start
 
 app_name = "core"
 

@@ -1,10 +1,11 @@
 """using Django 4.1.
 """
 
-from pathlib import Path
 import os
 import sys
 from datetime import timedelta
+from pathlib import Path
+
 import environ
 
 env = environ.Env(DEBUG=(bool, False))
@@ -37,17 +38,13 @@ THIRD_PARTY = [
     # "rest_framework_swagger",
     # "django_filters",
     # "djoser",
-    # "corsheaders",
-    # "versatileimagefield",
-    # "constance",
-    # "constance.backends.database",
-    # "ckeditor",
 ]
 
 LOCAL_APPS = ["accounts", "core"]
 
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY + LOCAL_APPS
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -107,8 +104,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-# STATIC_DIR = BASE_DIR.parent
-# print("ststic dir...", STATIC_DIR)
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
@@ -116,6 +111,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 STATIC_URL = "static/"
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
-# STATIC_ROOT = os.path.join(STATIC_DIR, "static")
+
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
